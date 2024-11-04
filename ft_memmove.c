@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:39:02 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/04 16:54:57 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:59:21 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*s;
 	int		i;
 
+	i = 0;
 	d = (char *)dest;
 	s = (char *)src;
 	if (src < dest)
