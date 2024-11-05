@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:49:00 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/05 13:37:17 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/05 15:15:55 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	s;
 	size_t	i;
 
-	if (size <= ft_strlen(dst))
+	if (size == 0 || size <= ft_strlen(dst))
 		return (size + ft_strlen(src));
 	i = -1;
 	s = ft_strlen(dst);
