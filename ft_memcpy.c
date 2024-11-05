@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:23:45 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/05 13:52:51 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:55:13 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*d;
 	char	*s;
-	if (src == 0)
+	
+	if (dest == 0)
 		return(NULL);
 	d = (char *)dest;
 	s = (char *)src;
