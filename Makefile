@@ -1,4 +1,4 @@
-CC = gcc
+CC = cc
 FLAGS = -Wall -Wextra -Werror
 
 HEAD_DIR = includes/

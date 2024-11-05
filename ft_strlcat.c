@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 14:55:10 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/05 11:43:11 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/11/05 11:49:00 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/11/05 12:10:54 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
+	int				s;
+	unsigned int	i;
 
-	i = -1;
-	if (size)
+	i = 0;
+	s = ft_strlen(dst);
+	while (i < size - s)
 	{
-		while ((src[++i] != 0) && (i < size - 1))
-			dst[i] = src[i];
-		dst[i] = '\0';
+		dst[s + i] = src[i];
+		i++;
 	}
-	return (ft_strlen(src));
+	return (ft_strlen(dst) + ft_strlen(src));
 }
