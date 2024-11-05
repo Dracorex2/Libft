@@ -6,11 +6,11 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:32:52 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/05 14:33:28 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:07:34 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);

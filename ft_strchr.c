@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 11:49:00 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/05 15:15:55 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/11/05 14:53:25 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/11/05 15:07:24 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t	s;
-	size_t	i;
+	int	i;
 
-	if (size == 0 || size <= ft_strlen(dst))
-		return (size + ft_strlen(src));
-	i = -1;
-	s = ft_strlen(dst);
-	while (src[++i] != 0 && (s + i) + 1 < size)
-		dst[s + i] = src[i];
-	dst[s + i] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[i]));
+	i = 0;
+	while (s[i] != c)
+	{
+		if (s[i] == 0)
+			return (0);
+		i++;
+	}
+	return ((char *)&s[i]);
 }
