@@ -25,14 +25,7 @@
 #	rm -f $(NAME)
 #
 #re : fclean all
-#
-#so:
-#	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-#	gcc -nostartfiles -shared -o libft.so $(OBJ)
-#
-#dev:
-#	make fclean;cd ../libft-unit-test; make f;cd ../libft; make fclean
-#
+
 SRC = *.c
 NAME = libft.a
 OBJ = ${SRC:.c=.o}

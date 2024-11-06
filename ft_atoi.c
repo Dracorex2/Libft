@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 10:42:32 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/06 12:09:22 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/11/06 12:11:05 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/11/06 12:19:54 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include <stdlib.h>
+#include <stdio.h>
+
+int	ft_atoi(const char *nptr)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+	int	nbr;
+	int	i;
+	int	sign;
+
+	nbr = 0;
+	i = 0;
+	sign = 1;
+	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+		nbr = nbr * 10 + (nptr[i++] - '0');
+	return (nbr * sign);
 }
