@@ -6,15 +6,15 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:23:28 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/06 14:37:43 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/06 15:56:11 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char 	*res;
+	char	*res;
 	size_t	len;
 	int		i;
 
