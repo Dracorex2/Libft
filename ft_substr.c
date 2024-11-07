@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:49:31 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/06 14:22:08 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:01:13 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
 	res = malloc(sizeof(char) * len + 1);
 	if (!res)
 		return (0);

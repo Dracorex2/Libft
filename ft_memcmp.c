@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:30:50 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/06 12:09:57 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:04:51 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	shr1 = (unsigned char *)s1;
 	shr2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
 	while (shr1[i] == shr2[i] && i < n - 1)
 		i++;
 	if (i == n)
