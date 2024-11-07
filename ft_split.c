@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:06 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/06 16:16:06 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:41:16 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static int	count(const char *str, char charset)
 	}
 	return (word);
 }
+
 static char	*ft_strdp(const char *src, char charset)
 {
 	int		len;
@@ -38,7 +39,7 @@ static char	*ft_strdp(const char *src, char charset)
 	int		i;
 
 	len = 0;
-	while (src[len])
+	while (src[len] && src[len] != charset)
 		len++;
 	res = malloc(sizeof(char) * (len + 1));
 	if (!res)

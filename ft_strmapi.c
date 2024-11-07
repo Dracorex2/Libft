@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 12:11:05 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/07 11:49:13 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/11/07 11:51:25 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/11/07 12:38:34 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_atoi(const char *nptr)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	nbr;
-	int	i;
-	int	sign;
+	char	*res;
+	size_t	i;
 
-	nbr = 0;
-	i = 0;
-	sign = 1;
-	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
-		if (nptr[i++] == '-')
-			sign *= -1;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-		nbr = nbr * 10 + (nptr[i++] - '0');
-	return (nbr * sign);
+	res = malloc(ft_strlen(s) + 1);
+	if (!res)
+		return (0);
+	i = -1;
+	while (s[++i])
+		res[i] = f(i, s[i]);
+	res[i] = 0;
+	return (res);
 }

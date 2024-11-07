@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 12:11:05 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/07 11:49:13 by lucmansa         ###   ########.fr       */
+/*   Created: 2024/11/07 12:28:09 by lucmansa          #+#    #+#             */
+/*   Updated: 2024/11/07 12:39:04 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int	nbr;
-	int	i;
-	int	sign;
+	size_t	i;
 
-	nbr = 0;
-	i = 0;
-	sign = 1;
-	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
-		if (nptr[i++] == '-')
-			sign *= -1;
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-		nbr = nbr * 10 + (nptr[i++] - '0');
-	return (nbr * sign);
+	i = -1;
+	while (s[++i])
+		write(fd, &s[i], 1);
+	write(fd, "\n", 1);
 }
