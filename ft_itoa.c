@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 17:34:21 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/06 18:25:30 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:51:23 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ void	ft_itoa2(char *res, size_t i, int n)
 	}
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*res;
 	size_t	i;
-	int	nb;
+	int		nb;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));

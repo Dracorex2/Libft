@@ -6,18 +6,17 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:30:07 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/07 12:36:38 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:54:21 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	long	nbr;
 
 	nbr = n;
-	
 	if (nbr < 0)
 	{
 		ft_putchar_fd('-', fd);

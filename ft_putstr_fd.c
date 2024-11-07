@@ -6,15 +6,15 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:24:38 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/07 12:26:27 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:52:02 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t i;
+	size_t	i;
 
 	i = -1;
 	while (s[++i])

@@ -6,7 +6,7 @@
 /*   By: lucmansa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:57:06 by lucmansa          #+#    #+#             */
-/*   Updated: 2024/11/07 14:48:41 by lucmansa         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:50:56 by lucmansa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	**ft_split(char const *s, char c)
 		while (s[j] == c)
 			j++;
 		tab[i] = ft_strdp(&s[j], c);
-		while (s[j]!= c && s[j] != 0)
+		while (s[j] != c && s[j] != 0)
 			j++;
 		while (s[j] == c)
 			j++;
